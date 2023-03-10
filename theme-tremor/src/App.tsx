@@ -7,7 +7,7 @@ import { Card, Title, AreaChart } from "@tremor/react";
 import { ThemeProvider } from "theme-ui";
 import { theme } from "./theme";
 
-const chartdata = [
+const data = [
   {
     date: "Jan 22",
     SemiAnalysis: 2890,
@@ -59,7 +59,7 @@ function App() {
       <Card>
         <Title>Newsletter revenue over time (USD)</Title>
         <AreaChart
-          data={chartdata}
+          data={data}
           categories={["SemiAnalysis", "The Pragmatic Engineer"]}
           dataKey="date"
           height="h-72"

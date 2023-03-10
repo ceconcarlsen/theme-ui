@@ -2,7 +2,16 @@
 
 import "@tremor/react/dist/esm/tremor.css";
 
-import { Card, Title, AreaChart } from "@tremor/react";
+import {
+  Card,
+  Title,
+  AreaChart,
+  Metric,
+  Text,
+  Footer,
+  Flex,
+  Button,
+} from "@tremor/react";
 
 import { ThemeProvider } from "theme-ui";
 import { theme } from "./theme";
@@ -68,6 +77,25 @@ function App() {
           marginTop="mt-4"
         />
       </Card>
+      <div
+        sx={{
+          mt: 16,
+        }}
+      >
+        <Card maxWidth="max-w-sm">
+          <Text>Ticket Sales</Text>
+          <Metric>$ 34,743</Metric>
+          <Footer height="h-16">
+            <Flex justifyContent="justify-end">
+              <Button
+                text="See detailed report"
+                size="xs"
+                importance="secondary"
+              />
+            </Flex>
+          </Footer>
+        </Card>
+      </div>
     </ThemeProvider>
   );
 }
